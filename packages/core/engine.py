@@ -24,7 +24,7 @@ class TemporalCoherenceEngine:
         # Implementation of frame extraction
         frames = []
         for i in range(video_metadata.frame_count):
-            frame = Frame(i, video_metadata.width, video_metadata.height)
+            frame = Frame(i, video_metadata.width, video_metadata.height, 0, 0.0)
             frames.append(frame)
         return frames
 
@@ -43,8 +43,11 @@ class TemporalCoherenceEngine:
         # Implementation of scene optimization
         optimized_scenes = []
         for scene in scenes:
-            optimized_scene = self.context_optimizer.optimize(scene)
-            optimized_scenes.append(optimized_scene)
+            if self.context_optimizer:
+                optimized_scene = self.context_optimizer.optimize(scene)
+                optimized_scenes.append(optimized_scene)
+            else:
+                optimized_scenes.append(scene)
         return optimized_scenes
 
 
