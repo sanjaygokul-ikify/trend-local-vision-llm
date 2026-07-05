@@ -1,0 +1,46 @@
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+*.pyd
+*.pyo
+*.pyc
+
+# C extensions
+*.c
+
+# PyInstaller
+*.spec
+
+# Virtualenv
+env/
+venv/
+
+# Package files
+*.egg
+*.egg-info
+
+# Distribution / package files
+*.rpm
+*.deb
+*.jar
+
+# Logs
+*.log
+
+# Runtime data
+.pip-log
+.pip-log.txt
+
+# Repository directory
+.git/
+
+# Data files
+*.data
+
+# Models
+*.model
+
+# Miscellaneous
+data/
+config.json
+requirements.txt
+README.md
